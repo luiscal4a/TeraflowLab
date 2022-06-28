@@ -1,0 +1,9 @@
+grpcio-health-checking
+grpcio
+grpcio-tools
+prometheus-client
+pytest
+pytest-benchmark
+numpy
+scikit-learn
+onnxruntime

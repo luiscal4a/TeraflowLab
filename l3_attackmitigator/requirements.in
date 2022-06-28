@@ -1,0 +1,6 @@
+grpcio-health-checking
+grpcio
+grpcio-tools
+prometheus-client
+numpy
+scikit-learn

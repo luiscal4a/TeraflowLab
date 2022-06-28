@@ -1,0 +1,16 @@
+FROM python:3
+
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir grpcio grpcio-tools
+
+RUN python3 -m pip install --upgrade pip setuptools wheel pip-tools
+
+COPY requirements.in requirements.in
+RUN pip-compile --output-file=requirements.txt requirements.in
+RUN python3 -m pip install -r requirements.in
+
+WORKDIR ./
+COPY . .
+
+EXPOSE 10001
+ENTRYPOINT ["python3", "."]
